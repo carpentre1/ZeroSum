@@ -1,0 +1,15 @@
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\bin\Debug\PennyGame.exe.config
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\bin\Debug\PennyGame.exe
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\bin\Debug\PennyGame.pdb
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.csprojResolveAssemblyReference.cache
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\MainWindow.g.cs
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\App.g.cs
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame_MarkupCompile.cache
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame_MarkupCompile.lref
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\MainWindow.baml
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.g.resources
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.Properties.Resources.resources
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.csproj.GenerateResource.Cache
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.csproj.CoreCompileInputs.cache
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.exe
+C:\Users\justin.carpenter\source\repos\PennyGame\PennyGame\obj\Debug\PennyGame.pdb
