@@ -5,21 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PennyGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="ButtonReveal" Content="Reveal coins" HorizontalAlignment="Left" Margin="193,234,0,0" VerticalAlignment="Top" Width="125" Click="ButtonReveal_Click" Height="41"/>
-        <Label x:Name="LabelPlayerA" Content="Player A" HorizontalAlignment="Left" Margin="57,38,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="LabelPlayerB" Content="Player B" HorizontalAlignment="Left" Margin="316,38,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.372,1.141"/>
-        <Label x:Name="LabelPlayerAResult" Content="Coin was: heads" HorizontalAlignment="Left" Margin="57,78,0,0" VerticalAlignment="Top" Width="138" FontSize="16"/>
-        <Label x:Name="LabelPlayerBResult" Content="Coin was: heads" HorizontalAlignment="Left" Margin="316,78,0,0" VerticalAlignment="Top" Width="129" FontSize="16"/>
-        <Label x:Name="LabelPlayerAAmount" Content="Pennies: 10" HorizontalAlignment="Left" Margin="57,109,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="LabelPlayerBAmount" Content="Pennies: 10" HorizontalAlignment="Left" Margin="316,109,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="ButtonHeads" Content="Set next penny to heads" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="162" Click="ButtonHeads_Click" Height="27"/>
-        <Button x:Name="ButtonTails" Content="Set next penny to tails" HorizontalAlignment="Left" Margin="24,202,0,0" VerticalAlignment="Top" Width="162" Click="ButtonTails_Click" Height="27"/>
-        <Label x:Name="LabelTotalResult" Content="" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="497" FontSize="18"/>
-        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="224" Margin="255,10,0,0" VerticalAlignment="Top" Width="5"/>
-        <Label x:Name="LabelPlayerAGained" Content="Change: 0" HorizontalAlignment="Left" Margin="57,132,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="LabelPlayerBGained" Content="Change: 0" HorizontalAlignment="Left" Margin="316,132,0,0" VerticalAlignment="Top" FontSize="16"/>
+        Title="MainWindow" Height="442.157" Width="934.804">
+	<Grid>
+		<Button x:Name="ButtonReveal" Content="Reveal coins" HorizontalAlignment="Left" Margin="193,234,0,0" VerticalAlignment="Top" Width="125" Click="ButtonReveal_Click" Height="41"/>
+		<Label x:Name="LabelPlayerA" Content="Player A" HorizontalAlignment="Left" Margin="57,38,0,0" VerticalAlignment="Top" FontSize="18"/>
+		<Label x:Name="LabelPlayerB" Content="Player B" HorizontalAlignment="Left" Margin="316,38,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.372,1.141"/>
+		<Label x:Name="LabelPlayerAResult" Content="Coin was: heads" HorizontalAlignment="Left" Margin="57,239,0,0" VerticalAlignment="Top" Width="138" FontSize="16"/>
+		<Label x:Name="LabelPlayerBResult" Content="Coin was: heads" HorizontalAlignment="Left" Margin="323,239,0,0" VerticalAlignment="Top" Width="129" FontSize="16"/>
+		<Label x:Name="LabelPlayerAAmount" Content="Pennies: 10" HorizontalAlignment="Left" Margin="57,109,0,0" VerticalAlignment="Top" FontSize="16"/>
+		<Label x:Name="LabelPlayerBAmount" Content="Pennies: 10" HorizontalAlignment="Left" Margin="316,109,0,0" VerticalAlignment="Top" FontSize="16"/>
+		<Button x:Name="ButtonHeads" Content="Set next penny to heads" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="162" Click="ButtonHeads_Click" Height="27"/>
+		<Button x:Name="ButtonTails" Content="Set next penny to tails" HorizontalAlignment="Left" Margin="24,202,0,0" VerticalAlignment="Top" Width="162" Click="ButtonTails_Click" Height="27"/>
+		<Label x:Name="LabelTotalResult" Content="" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="497" FontSize="18"/>
+		<Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="224" Margin="255,10,0,0" VerticalAlignment="Top" Width="5"/>
+		<Label x:Name="LabelPlayerAGained" Content="Change: 0" HorizontalAlignment="Left" Margin="57,132,0,0" VerticalAlignment="Top" FontSize="16"/>
+		<Label x:Name="LabelPlayerBGained" Content="Change: 0" HorizontalAlignment="Left" Margin="316,132,0,0" VerticalAlignment="Top" FontSize="16"/>
+		<TabControl HorizontalAlignment="Left" Height="344" Margin="501,38,0,0" VerticalAlignment="Top" Width="426">
+			<TabItem x:Name="TabHead1" Header="Game Rules">
+				<Grid x:Name="Grid" Background="#FFE5E5E5">
+					<TextBlock x:Name="Rules1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Both players start with 10 pennies." VerticalAlignment="Top" Height="46" Width="400" Margin="10,10,0,0" FontSize="16"/>
+					<TextBlock x:Name="Rules2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Each time you click &quot;Reveal coins&quot;, you (player A) and the AI opponent will compare the sides of your selected coins." VerticalAlignment="Top" Height="67" Width="400" Margin="10,56,0,0" FontSize="16"/>
+					<TextBlock x:Name="Rules3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="If both coins are are same side up, you get your penny back and you get player B's penny." VerticalAlignment="Top" Height="67" Width="400" Margin="10,133,0,0" FontSize="16"/>
+					<TextBlock x:Name="Rules4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="If one coin is heads and the other is tails, player B gets his penny back and he gets your penny." VerticalAlignment="Top" Height="75" Width="400" Margin="10,205,0,0" FontSize="16"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TabHead2" Header="Zero-Sum">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock x:Name="TabText2" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="A zero-sum game is one where the gains and losses of each participant balance out to equal zero." VerticalAlignment="Top" Height="82" Width="400" FontSize="16"/>
+					<TextBlock x:Name="TabText2_Copy" HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="This can be seen in this penny game by monitoring the &quot;Change&quot; values of both participants. Add the two change values together, and they should always equal zero." VerticalAlignment="Top" Height="119" Width="400" FontSize="16"/>
+					<TextBlock x:Name="TabText2_Copy1" HorizontalAlignment="Left" Margin="10,221,0,0" TextWrapping="Wrap" Text="If the items being gained and lost are different, it is not zero-sum. For example, trading 5 pencils for 5 pens is not zero-sum." VerticalAlignment="Top" Height="85" Width="400" FontSize="16"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="TabHead3" Header="Test Knowledge" Margin="-2,-2,-2,0">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock x:Name="Question1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="1. Can a game be zero-sum if one player can end up with zero pennies?" VerticalAlignment="Top" Height="39" Width="400" FontSize="14"/>
+					<TextBlock x:Name="Answer1" HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" Text="Yes. As long as all the pennies that player loses are given to other players, it's still zero sum." VerticalAlignment="Top" Height="41" Width="400" FontSize="14"/>
+					<TextBlock x:Name="Question1_Copy" HorizontalAlignment="Left" Margin="10,95,0,0" TextWrapping="Wrap" Text="2. If both players are awarded 1 extra penny by an outside source when both pennies are revealed to be tails, is it still a zero-sum game?" VerticalAlignment="Top" Height="54" Width="400" FontSize="14"/>
+					<TextBlock x:Name="Answer1_Copy" HorizontalAlignment="Left" Margin="10,154,0,0" TextWrapping="Wrap" Text="No.  The aggregate gains and losses of the players would no longer equal zero." VerticalAlignment="Top" Height="39" Width="400" FontSize="14"/>
+					<Button x:Name="Hider1" Content="Reveal answer" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="400" Click="Hider1_Click" Height="41"/>
+					<Button x:Name="Hider2" Content="Reveal answer" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="400" Height="39" Click="Hider2_Click"/>
+					<Button x:Name="ButtonAward" Content="Award both players 1 penny" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="175" Height="25" Click="ButtonAward_Click"/>
+					<TextBlock x:Name="AwardA" HorizontalAlignment="Left" Margin="191,193,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="29" Width="36" FontSize="20" FontWeight="Bold"/>
+					<TextBlock x:Name="AwardB" HorizontalAlignment="Left" Margin="249,193,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="29" Width="34" FontSize="20" FontWeight="Bold"/>
+					<TextBlock x:Name="AwardPlus" HorizontalAlignment="Left" Margin="227,193,0,0" TextWrapping="Wrap" Text="+" VerticalAlignment="Top" Height="29" Width="22" FontSize="20"/>
+					<TextBlock x:Name="AwardEquals" HorizontalAlignment="Left" Margin="288,193,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Height="29" Width="22" FontSize="20"/>
+					<TextBlock x:Name="AwardTotal" HorizontalAlignment="Left" Margin="315,193,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="29" Width="37" FontSize="20" FontWeight="Bold"/>
+					<TextBlock x:Name="Question1_Copy1" HorizontalAlignment="Left" Margin="10,244,0,0" TextWrapping="Wrap" Text="3. Try explaining zero-sum to someone nearby (or to an inanimate object). This is a great way to test your own understanding!" VerticalAlignment="Top" Height="62" Width="400" FontSize="14"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
 
-    </Grid>
+	</Grid>
 </Window>
