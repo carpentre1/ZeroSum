@@ -13,25 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PennyGame
+namespace PennyGame //by Justin Carpenter
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        int A_Pennies = 10;
-        int B_Pennies = 10;
+        int A_Pennies = 10;//A is the player
+        int B_Pennies = 10;//B is the AI opponent
 
         int A_PenniesGained = 0;
         int B_PenniesGained = 0;
 
-        int A_IsHeads = 1;//1 = heads, 0 = tails
+        int A_IsHeads = 1;//1 = heads, 0 = tails. using an integer instead of bool since i couldn't find how to randomize a bool for choosing what side of the coin the AI picks
         int B_IsHeads = 1;
         public MainWindow()
         {
             InitializeComponent();
-            LabelPlayerAResult.Content = "";
+            LabelPlayerAResult.Content = "";//keep these texts blank until the player starts playing
             LabelPlayerBResult.Content = "";
             LabelTotalResult.Content = "You are Player A. Click \"Reveal coins\" to start gambling!";
             LabelPlayerAGained.Foreground = new SolidColorBrush(Colors.Purple);//adds color to the "change" values so the player will pay attention to them as they update
@@ -58,7 +58,7 @@ namespace PennyGame
             LabelTotalResult.Content = "You have set your next penny to be tails.";
         }
 
-        private void ButtonReveal_Click(object sender, RoutedEventArgs e)//reveals both participants' pennies and updates the results of the game
+        private void ButtonReveal_Click(object sender, RoutedEventArgs e)//reveals both participants' pennies and calls the update label function
         {
             if(A_Pennies <= 0)
             {
@@ -100,14 +100,14 @@ namespace PennyGame
             LabelPlayerBGained.Content = "Change: " + B_PenniesGained.ToString();
             AwardB.Text = B_PenniesGained.ToString();
 
-            AwardTotal.Text = (A_PenniesGained + B_PenniesGained).ToString();//add the two values together to show whether the game is currently still zero-sum
+            AwardTotal.Text = (A_PenniesGained + B_PenniesGained).ToString();//for "Test Knowledge"; add the two values together to show whether the game is currently still zero-sum
 
-            if (isPlaying && A_IsHeads != B_IsHeads)
+            if (isPlaying && A_IsHeads != B_IsHeads)//the player loses
             {
                 LabelTotalResult.Foreground = new SolidColorBrush(Colors.Red);
                 LabelTotalResult.Content = "The pennies were different sides up, you lost 2 pennies!";
             }
-            if (isPlaying && A_IsHeads == B_IsHeads)
+            if (isPlaying && A_IsHeads == B_IsHeads)//the player wins
             {
                 LabelTotalResult.Foreground = new SolidColorBrush(Colors.Green);
                 LabelTotalResult.Content = "The pennies were the same, you won 2 pennies!";
